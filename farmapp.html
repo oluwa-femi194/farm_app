@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Management App - Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <!-- Login Form -->
+        <h1>Login to Farm Management App</h1>
+        <form id="login-form">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <div class="error-message" id="login-email-error"></div>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                <div class="error-message" id="login-password-error"></div>
+            </div>
+
+            <!-- Show Password & Remember Me Checkbox Group -->
+            <div class="checkbox-group">
+                <div class="show-password">
+                    <input type="checkbox" id="show-password"> <label for="show-password">Show Password</label>
+                </div>
+                <div class="remember-me">
+                    <label>
+                        <input type="checkbox" id="remember-me"> Remember Me
+                    </label>
+                </div>
+            </div>
+
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="#" id="sign-up-link">Sign up</a></p>
+        <p><a href="#" id="forgot-password-link">Forgot password?</a></p>
+
+        <!-- Sign Up Form (Hidden by default) -->
+        <form id="sign-up-form" style="display:none;">
+            <h2>Create an Account</h2>
+            <div class="form-group">
+                <label for="sign-up-email">Email:</label>
+                <input type="email" id="sign-up-email" name="email" placeholder="Enter your email" required>
+                <div class="error-message" id="sign-up-email-error"></div>
+            </div>
+            <div class="form-group">
+                <label for="sign-up-password">Password:</label>
+                <input type="password" id="sign-up-password" name="password" placeholder="Enter your password" minlength="6" required>
+                <small>Password must be at least 6 characters and include a number.</small>
+                <div class="error-message" id="sign-up-password-error"></div>
+                <div id="password-strength" class="password-strength"></div>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+                <div class="error-message" id="confirm-password-error"></div>
+            </div>
+            <button type="submit">Sign Up</button>
+            <p>Already have an account? <a href="#" id="back-to-login-link">Back to login</a></p>
+        </form>
+
+        <!-- Forgot Password Form (Hidden by default) -->
+        <form id="forgot-password-form" style="display:none;">
+            <h2>Reset Password</h2>
+            <div class="form-group">
+                <label for="reset-email">Email:</label>
+                <input type="email" id="reset-email" name="email" placeholder="Enter your email to reset password" required>
+                <div class="error-message" id="reset-email-error"></div>
+            </div>
+            <button type="submit" id="reset-password-btn">Send Reset Link</button>
+            <p>Remember your password? <a href="#" id="back-to-login-from-forgot">Back to login</a></p>
+        </form>
+
+        <!-- Footer Section (Placed at the bottom) -->
+        <footer>
+            <p>© 2024 Farm Management App. All rights reserved.</p>
+            <p>© FEMI_INC.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
